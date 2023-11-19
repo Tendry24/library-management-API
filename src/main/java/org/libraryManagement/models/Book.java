@@ -20,5 +20,5 @@ public class Book {
     private Integer pageNumbers;
     private String topic;
     private Timestamp releaseDate;
-    private String authorId;
+    private int authorId;
 }

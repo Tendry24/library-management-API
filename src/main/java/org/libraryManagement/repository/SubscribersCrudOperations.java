@@ -46,7 +46,7 @@ public class SubscribersCrudOperations implements CrudOperations<Subscriber>{
     @Override
     public List findAll() {
         List<Subscriber> subscriber = new ArrayList<>();
-        String sql = "SELECT * FROM subscriber";
+        String sql = "SELECT * FROM subscribers";
 
         try (Statement statement = Connection.getConnection().createStatement();
              ResultSet resultSet = statement.executeQuery(sql)) {

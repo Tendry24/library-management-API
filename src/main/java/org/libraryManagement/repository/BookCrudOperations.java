@@ -19,7 +19,7 @@ public class BookCrudOperations implements CrudOperations<Book> {
             statement.setString(2, book.getTopic());
             statement.setInt(3, book.getPageNumbers());
             statement.setTimestamp(4, book.getReleaseDate());
-            statement.setString(5,book.getAuthorId());
+            statement.setInt(5,book.getAuthorId());
 
             statement.executeUpdate();
             System.out.println("Book added successfully!");
@@ -93,7 +93,7 @@ public class BookCrudOperations implements CrudOperations<Book> {
         Integer pageNumbers = resultSet.getInt("pageNumbers");
         String topic = resultSet.getString("topic");
         Timestamp releaseDate = resultSet.getTimestamp("releaseDate");
-        String authorId = resultSet.getString("authorId");
+        int authorId = resultSet.getInt("authorId");
 
         return new Book(id,Name,pageNumbers,topic,releaseDate,authorId);
     }
