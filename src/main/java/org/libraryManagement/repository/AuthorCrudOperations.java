@@ -18,7 +18,7 @@ public class AuthorCrudOperations implements CrudOperations<Author> {
             PreparedStatement statement = Connection.getConnection().prepareStatement(query);
 
             statement.setString(1, author.getName());
-            statement.setString(2, String.valueOf(author.getGender()));
+            statement.setString(2, author.getGender());
 
             statement.executeUpdate();
             System.out.println("Author added successfully!");
