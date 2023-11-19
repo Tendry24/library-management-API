@@ -33,6 +33,24 @@ public class Main {
             System.out.println(subscribers);
         }
 
+        //Save
+        Author authors = new Author();
+        authors.setName("John Doe");
+        authors.setGender("M");
+
+
+        Author savedAuthor = find.save(authors);
+
+
+        if (savedAuthor != null) {
+            System.out.println("Author saved successfully:");
+            System.out.println("ID: " + savedAuthor.getId());
+            System.out.println("Name: " + savedAuthor.getName());
+            System.out.println("Gender: " + savedAuthor.getGender());
+        } else {
+            System.out.println("Failed to save author.");
+        }
+
 
 
 
