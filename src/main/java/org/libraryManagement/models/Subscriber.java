@@ -13,7 +13,7 @@ import lombok.*;
 public class Subscriber extends User{
     private String reference;
 
-    public Subscriber(String id, String name, String reference) {
+    public Subscriber(int id, String name, String reference) {
         super(id, name);
         this.reference = reference;
     }

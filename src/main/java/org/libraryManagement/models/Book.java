@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 @ToString
 
 public class Book {
-    private String id;
+    private int id;
     private String bookName;
     private Integer pageNumbers;
     private String topic;

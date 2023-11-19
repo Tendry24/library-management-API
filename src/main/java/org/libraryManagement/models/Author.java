@@ -10,7 +10,7 @@ import lombok.*;
 @ToString
 
 public class Author  {
-        private Integer id;
+        private int id;
         private String name;
         private String gender;
 }
