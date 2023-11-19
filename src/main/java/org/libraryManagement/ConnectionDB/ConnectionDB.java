@@ -1,4 +1,4 @@
-package org.libraryManagement.connectionDB;
+package org.libraryManagement.ConnectionDB;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

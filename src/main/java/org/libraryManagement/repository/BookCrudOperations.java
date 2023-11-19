@@ -72,7 +72,7 @@ public class BookCrudOperations implements CrudOperations<Book> {
 
             PreparedStatement statement = Connection.getConnection().prepareStatement(sql);
 
-            statement.setString(1, toDelete.getId());
+            statement.setString(1, String.valueOf(toDelete.getId()));
 
             int row = statement.executeUpdate();
 
@@ -88,7 +88,7 @@ public class BookCrudOperations implements CrudOperations<Book> {
     }
 
     private  Book extractBookFromResultSet(ResultSet resultSet) throws SQLException {
-        String id = resultSet.getString("id");
+        int id = resultSet.getInt("id");
         String Name = resultSet.getString("bookName");
         Integer pageNumbers = resultSet.getInt("pageNumbers");
         String topic = resultSet.getString("topic");

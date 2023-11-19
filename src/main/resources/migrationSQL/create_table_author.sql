@@ -4,4 +4,4 @@ create table if not exists author (
                                       gender char check ( gender = 'M' or gender = 'F' )
     );
 
-insert into author values ('Jean' , 'M'),('Lara' , 'F'),('Yuu','F');
+insert into author(name,gender) values ('Jean' , 'M'),('Lara' , 'F'),('Yuu','F');
